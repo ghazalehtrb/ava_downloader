@@ -1,3 +1,8 @@
+This repository is forked from https://github.com/alainray/ava_downloader and modified to only download videos from specified classes. 
+In addition to below instruction, the annotations should be downloaded from https://research.google.com/ava/download.html.
+The class ids are given in ava_action_list_vx.x.pbtxt files. 
+
+
 # AVA Dataset Downloader Script
 
 This script downloads all videos associated with the AVA (Atomic Visual Actions) dataset available from https://github.com/cvdfoundation/ava-dataset. 
