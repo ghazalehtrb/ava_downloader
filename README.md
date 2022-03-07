@@ -4,6 +4,7 @@ The class ids are given in ava_action_list_vx.x.pbtxt files.
 Set the annotation file and target classes with:
 
 `--annot", "-a", help="annotations", default="ava_train_v2.1.csv"`
+
 `--target_cls", "-t", help="id of target classes seperated by ,", default="59,36,47,78"`
 
 
