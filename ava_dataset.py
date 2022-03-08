@@ -90,7 +90,7 @@ def process_video(filename, base_dir, output_dir):
 
 parser = argparse.ArgumentParser()
 parser.add_argument( "input" , help="Filename of file with video filenames")
-parser.add_argument("--annot", "-a", help="annotations", default="ava_dataset")
+parser.add_argument("--annot", "-a", help="annotations", default="ava_train_v2.1.csv")
 parser.add_argument("--target_cls", "-t", help="id of target classes seperated by ,", default="59,36,47,78")
 parser.add_argument("--video_dir", "-v", help="Directory to store downloaded videos", default="ava_dataset")
 parser.add_argument("--output_dir", "-o", help="Directory to store processed videos", default="processed")
@@ -100,9 +100,9 @@ parser.add_argument("-f", "--function", help="Whether you want to download, cut 
 args = parser.parse_args()
 annot_file = args.annot
 input_file = args.input
-target_cls = args.input.split(',')
+target_cls = args.target_cls.split(',')
 
-csvfile = pd.read_csv("ava_v2.2/" + annot_file , encoding= 'unicode_escape')
+csvfile = pd.read_csv("ava_v2.1/" + annot_file , encoding= 'unicode_escape')
 videos_cls = video_info(csvfile, target_cls)
 
 base_dir = args.video_dir
