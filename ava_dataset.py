@@ -14,7 +14,7 @@ def video_info(data_block, target_cls):
   vids_cls = {}
   for i in index_list:
     video_id = data_block.loc[i]['video_id']
-    action_id = data_block.loc[i]['action_id']
+    action_id = str(data_block.loc[i]['action_id'])
     if action_id in target_cls:
       vids_cls[video_id] = action_id
 
